@@ -1,0 +1,1 @@
+SELECT * FROM vehicles WHERE $2 = $1;
