@@ -46,6 +46,7 @@ const getAllVehicles = (req,res) => {
         if(req.query.userFirstStart){
             console.log("firststart")
             let { userFirstStart } = req.query
+            userFirstStart += "_"
             console.log(userFirstStart)
             req.app.get('db').get_all_vehicles_start([userFirstStart]).then(response => res.json(response)).catch(err => console.log(err))
         }
